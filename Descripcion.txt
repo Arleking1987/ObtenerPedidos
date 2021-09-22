@@ -1,0 +1,8 @@
+
+
+
+{ RESTFul API with .NET Core 3.1 - Part 4 - Fluent Api in EF Core:::Para utilizar las buenas prácticas, en el archivo Estado_pedidosContext.cs vamos a separar cada uno de los ModelBuilders de las tablas en clases aparte
+esto con el propósito de manejar líneas de codigo en cantidades pequeñas ya que si la base de datos tiene 50 tablas, este archivo se vuelve inmanejable. Vamos a infraestructura, Data y creamos
+una nueva carpeta llamada Configurations y en esta creamos clases con las configuraciones de cada tabla de la base de datos del Estado_pedidosContext.cs.
+Luego de crear la clase PedidosConfiguration, implementamos la interface IEntityTypeConfiguration<Pedidos> y dentro del método que se implementa, se pone todo lo que va dentro de las llaves de
+modelBuilder.Entity<Pedidos> del Estado_pedidosContext.cs.
