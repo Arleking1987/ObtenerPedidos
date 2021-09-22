@@ -5,4 +5,4 @@
 esto con el propósito de manejar líneas de codigo en cantidades pequeñas ya que si la base de datos tiene 50 tablas, este archivo se vuelve inmanejable. Vamos a infraestructura, Data y creamos
 una nueva carpeta llamada Configurations y en esta creamos clases con las configuraciones de cada tabla de la base de datos del Estado_pedidosContext.cs.
 Luego de crear la clase PedidosConfiguration, implementamos la interface IEntityTypeConfiguration<Pedidos> y dentro del método que se implementa, se pone todo lo que va dentro de las llaves de
-modelBuilder.Entity<Pedidos> del Estado_pedidosContext.cs.
+modelBuilder.Entity<Pedidos> del Estado_pedidosContext.cs.efvweveve
