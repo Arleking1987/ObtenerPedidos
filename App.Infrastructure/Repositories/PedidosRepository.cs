@@ -31,5 +31,13 @@ namespace SocialMedia.Infrastructure.Repositories
             var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.IdPedido == id);
             return pedido;
         }
+
+        public async Task PostPedido(Pedidos pedido)
+        {
+            _context.Pedidos.Add(pedido);
+            await _context.SaveChangesAsync();
+        }
+
+
     }
 }

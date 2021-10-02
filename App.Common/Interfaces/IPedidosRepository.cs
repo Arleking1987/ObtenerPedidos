@@ -11,5 +11,7 @@ namespace SocialMedia.Core.Interfaces
         Task<IEnumerable<Pedidos>> GetAllPedidos();
         Task<Pedidos> GetPedido(int id);
 
+        Task PostPedido(Pedidos pedido);
+
     }
 }

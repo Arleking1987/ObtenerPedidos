@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using SocialMedia.Core.Entities;
 using SocialMedia.Core.Interfaces;
 using SocialMedia.Infrastructure.Repositories;
 using System;
@@ -20,6 +21,7 @@ namespace App.web.Controllers
         }
 
         [HttpGet]
+        [Route("GetAllPedidos")]
         public async  Task<IActionResult> GetAllPedidos()
         {
             var pedidos = await  _pedidosRepository.GetAllPedidos();
@@ -31,6 +33,15 @@ namespace App.web.Controllers
         {
             var pedidos = await _pedidosRepository.GetPedido(id);
             return Ok(pedidos);
+        }
+
+        [HttpPost]
+        [Route("PostPedido")]
+
+        public async Task<IActionResult> PostPedido(Pedidos pedido)
+        {
+            await _pedidosRepository.PostPedido(pedido);
+            return Ok(pedido);
         }
     }
 }
