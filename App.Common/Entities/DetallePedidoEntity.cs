@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SocialMedia.Core.Entities
 {
-    public partial class DetallePedido
+    public partial class DetallePedidoEntity
     {
         public int IdDetalle { get; set; }
         public string Tipo { get; set; }
@@ -11,6 +11,6 @@ namespace SocialMedia.Core.Entities
         public string Detalle { get; set; }
         public int IdPedido { get; set; }
 
-        public virtual Pedidos IdPedidoNavigation { get; set; }
+        public virtual PedidosEntity IdPedidoNavigation { get; set; }
     }
 }

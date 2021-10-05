@@ -1,3 +1,5 @@
+using App.Config;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using SocialMedia.Core.Interfaces;
 using SocialMedia.Infrastructure.Data;
 using SocialMedia.Infrastructure.Repositories;
+using SocialMedia.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,6 +44,16 @@ namespace App.web
 
             //Configuracion de la inyeccion de dependencias
             services.AddTransient<IPedidosRepository, PedidosRepository>();
+            services.AddTransient<IPedidosService, PedidosService>();
+            services.AddTransient<IMapper, Mapper>();
+
+            //Configuración del Mapper
+            var mapperconfig = new MapperConfiguration(m => {
+                m.AddProfile(new AutomapperProfile());
+            });
+            IMapper mapper = mapperconfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddMvc();
 
         }
 

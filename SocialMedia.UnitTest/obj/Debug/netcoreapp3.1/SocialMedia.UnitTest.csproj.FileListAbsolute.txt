@@ -6,7 +6,12 @@ C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netc
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\SocialMedia.UnitTest.runtimeconfig.dev.json
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\SocialMedia.UnitTest.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\SocialMedia.UnitTest.pdb
+C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\SocialMedia.UnitTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll

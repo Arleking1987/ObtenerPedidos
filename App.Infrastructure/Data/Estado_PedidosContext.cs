@@ -17,8 +17,8 @@ namespace SocialMedia.Infrastructure.Data
         {
         }
 
-        public virtual DbSet<DetallePedido> DetallePedido { get; set; }
-        public virtual DbSet<Pedidos> Pedidos { get; set; }
+        public virtual DbSet<DetallePedidoEntity> DetallePedido { get; set; }
+        public virtual DbSet<PedidosEntity> Pedidos { get; set; }
 
        
 

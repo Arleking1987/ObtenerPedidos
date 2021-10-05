@@ -4,9 +4,9 @@ using SocialMedia.Core.Entities;
 
 namespace SocialMedia.Infrastructure.Data.Configurations
 {
-    public class DetallePedidoConfiguration : IEntityTypeConfiguration<DetallePedido>
+    public class DetallePedidoConfiguration : IEntityTypeConfiguration<DetallePedidoEntity>
     {
-        public void Configure(EntityTypeBuilder<DetallePedido> builder)
+        public void Configure(EntityTypeBuilder<DetallePedidoEntity> builder)
         {
             builder.HasKey(e => e.IdDetalle);
 

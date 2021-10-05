@@ -4,9 +4,9 @@ using SocialMedia.Core.Entities;
 
 namespace SocialMedia.Infrastructure.Data.Configurations
 {
-    public class PedidosConfiguration : IEntityTypeConfiguration<Pedidos>
+    public class PedidosConfiguration : IEntityTypeConfiguration<PedidosEntity>
     {
-        public void Configure(EntityTypeBuilder<Pedidos> builder)
+        public void Configure(EntityTypeBuilder<PedidosEntity> builder)
         {
             builder.HasKey(e => e.IdPedido)
                     .HasName("PK_Pedido");

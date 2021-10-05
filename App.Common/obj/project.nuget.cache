@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "+bCij5xxvY0olQPw6FylBUqbm4ouurlPXJBxl0MKIdzN6s1V/Wc1k7otqBvArwkklDVHeNRG48z8g9Mi9tF7ZQ==",
+  "dgSpecHash": "N2AiCK30jXkRQ1821J8MgfFj5j4Uvev+4wd/E6EKsbpRIN/aMr6usWK1OCrChbochcY9xH+Gl7Dq7913Jm9x9Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\usuario\\source\\repos\\ObtenerPedidos\\App.Common\\SocialMedia.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\usuario\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

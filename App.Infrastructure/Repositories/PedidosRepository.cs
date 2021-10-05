@@ -18,7 +18,7 @@ namespace SocialMedia.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<Pedidos>> GetAllPedidos()
+        public async Task<IEnumerable<PedidosEntity>> GetAllPedidos()
         {
 
             var pedidos = await _context.Pedidos.ToListAsync();
@@ -26,13 +26,13 @@ namespace SocialMedia.Infrastructure.Repositories
             return pedidos;
         }
 
-        public async Task<Pedidos> GetPedido(int id)
+        public async Task<PedidosEntity> GetPedido(int id)
         {
             var pedido = await _context.Pedidos.FirstOrDefaultAsync(x => x.IdPedido == id);
             return pedido;
         }
 
-        public async Task PostPedido(Pedidos pedido)
+        public async Task PostPedido(PedidosEntity pedido)
         {
             _context.Pedidos.Add(pedido);
             await _context.SaveChangesAsync();

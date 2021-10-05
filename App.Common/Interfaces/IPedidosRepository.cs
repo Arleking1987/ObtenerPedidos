@@ -8,10 +8,10 @@ namespace SocialMedia.Core.Interfaces
 {
    public  interface IPedidosRepository
     {
-        Task<IEnumerable<Pedidos>> GetAllPedidos();
-        Task<Pedidos> GetPedido(int id);
+        public Task<IEnumerable<PedidosEntity>> GetAllPedidos();
+        Task<PedidosEntity> GetPedido(int id);
 
-        Task PostPedido(Pedidos pedido);
+        Task PostPedido(PedidosEntity pedido);
 
     }
 }

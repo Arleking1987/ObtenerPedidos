@@ -1,21 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace SocialMedia.Core.Entities
+namespace SocialMedia.Core.DTOs
 {
-    public partial class Pedidos
+   public  class PedidosDTO
     {
-        public Pedidos()
-        {
-            DetallePedido = new HashSet<DetallePedido>();
-        }
-
         public int IdPedido { get; set; }
         public DateTime FechaPedido { get; set; }
         public DateTime FechaEntrega { get; set; }
         public string NombreCliente { get; set; }
         public string Estado { get; set; }
-
-        public virtual ICollection<DetallePedido> DetallePedido { get; set; }
     }
 }
