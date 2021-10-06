@@ -18,12 +18,12 @@ namespace SocialMedia.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<IEnumerable<PedidosEntity>> GetAllPedidos()
+        public  IQueryable<PedidosEntity> GetAllPedidos()
         {
+            IQueryable<PedidosEntity> list = _context.Pedidos;
+            
 
-            var pedidos = await _context.Pedidos.ToListAsync();
-
-            return pedidos;
+            return list;
         }
 
         public async Task<PedidosEntity> GetPedido(int id)

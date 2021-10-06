@@ -8,6 +8,7 @@ namespace SocialMedia.Infrastructure.Services
 {
     public interface IPedidosService
     {
-        public Task<IEnumerable<PedidosDTO>> GetAllPedidos();
+        List<PedidosDTO> GetAllPedidos();
+        //public Task<IEnumerable<PedidosDTO>> GetAllPedidos();
     }
 }

@@ -45,15 +45,18 @@ namespace App.web
             //Configuracion de la inyeccion de dependencias
             services.AddTransient<IPedidosRepository, PedidosRepository>();
             services.AddTransient<IPedidosService, PedidosService>();
-            services.AddTransient<IMapper, Mapper>();
 
-            //Configuración del Mapper
-            var mapperconfig = new MapperConfiguration(m => {
-                m.AddProfile(new AutomapperProfile());
+            //Configuración del mapper
+            var mapperConfig = new MapperConfiguration(m =>
+            {
+                m.AddProfile(new AutoMapperConfig());
             });
-            IMapper mapper = mapperconfig.CreateMapper();
+
+            IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
-            services.AddMvc();
+            services.AddMvcCore();
+
+          
 
         }
 

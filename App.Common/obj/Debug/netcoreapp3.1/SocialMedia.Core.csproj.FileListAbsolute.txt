@@ -1,7 +1,6 @@
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\bin\Debug\netcoreapp3.1\SocialMedia.Core.deps.json
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\bin\Debug\netcoreapp3.1\SocialMedia.Core.dll
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\bin\Debug\netcoreapp3.1\SocialMedia.Core.pdb
-C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\obj\Debug\netcoreapp3.1\SocialMedia.Core.csproj.AssemblyReference.cache
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\obj\Debug\netcoreapp3.1\SocialMedia.Core.AssemblyInfoInputs.cache
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\obj\Debug\netcoreapp3.1\SocialMedia.Core.AssemblyInfo.cs
 C:\Users\usuario\source\repos\ObtenerPedidos\App.Common\obj\Debug\netcoreapp3.1\SocialMedia.Core.csproj.CoreCompileInputs.cache

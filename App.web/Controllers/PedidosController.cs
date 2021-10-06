@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia.Core.DTOs;
 using SocialMedia.Core.Entities;
@@ -8,6 +9,7 @@ using SocialMedia.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace App.web.Controllers
@@ -17,17 +19,30 @@ namespace App.web.Controllers
     public class PedidosController : ControllerBase
     {
         private readonly IPedidosService _pedidosService;
+        
         public PedidosController(IPedidosService pedidosService)
         {
             _pedidosService = pedidosService;
+            
         }
 
         [HttpGet]
         [Route("GetAllPedidos")]
-        public async  Task<IActionResult> GetAllPedidos()
+        public List<PedidosDTO> GetAllPedidos()
         {
-            var pedidos = await  _pedidosService.GetAllPedidos();
-            return Ok(pedidos);
+            List<PedidosDTO> data = new List<PedidosDTO>();
+
+            try
+            {
+                data = _pedidosService.GetAllPedidos();
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex + "Error de petición");
+            }
         }
 
         //[HttpGet]
