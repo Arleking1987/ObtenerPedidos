@@ -13,40 +13,52 @@ namespace SocialMedia.Infrastructure.Services
     public class PedidosService : IPedidosService
     {
         protected IPedidosRepository _pedidosRepository;
+        protected IDetallePedidoService _detallePedidoService;
         private readonly IMapper _mapper;
 
-        public PedidosService(IPedidosRepository pedidosRepository, IMapper mapper)
+        public PedidosService(IPedidosRepository pedidosRepository, IDetallePedidoService detallePedidoService,IMapper mapper)
         {
             _pedidosRepository = pedidosRepository;
+            _detallePedidoService = detallePedidoService;
             _mapper = mapper;
 
         }
 
         public List<PedidosDTO> GetAllPedidos()
         {
-            var listDTO = new List<PedidosDTO>();
-            var listEntities = _pedidosRepository.GetAllPedidos();
+            List<PedidosDTO> listDTO = new List<PedidosDTO>();
+            IQueryable<PedidosEntity> listEntities = _pedidosRepository.GetAllPedidos();
             listDTO = _mapper.Map<List<PedidosDTO>>(listEntities);
             return listDTO;
 
         }
-        //public async Task<IEnumerable<PedidosDTO>> GetAllPedidos()
-        //{
-        //    //List<PedidosDTO> pedidosDTO = new List<PedidosDTO>();
-        //    PedidosEntity entity = new PedidosEntity();
-        //    IEnumerable<PedidosEntity> entities = await _pedidosRepository.GetAllPedidos();
 
-        //   var pedidosDTO = entities.Select(x=> new PedidosDTO)
-        //    {
-        //        IdPedido = entity.IdPedido,
-        //        FechaPedido = entity.FechaPedido,
-        //        FechaEntrega = entity.FechaEntrega,
-        //        NombreCliente = entity.NombreCliente,
-        //        Estado = entity.Estado
-        //    };
+        public List<DetallePedidoContract> GetPedidoById(int id)
+        {
+            List<DetallePedidoContract> pedidoDetalle = new List<DetallePedidoContract>();
+            IQueryable<PedidosEntity> listEntities = _pedidosRepository.GetAllPedidos();
+            IQueryable<PedidosEntity> pedidoEntity = listEntities.Where(x => x.IdPedido == id);
+            List<PedidosDTO> pedidosDTO = _mapper.Map<List<PedidosDTO>>(pedidoEntity);
+            List<DetallePedidoDTO> detallePedido = _detallePedidoService.GetAllDetallePedidos();
 
-        //    return pedidosDTO;
+            pedidoDetalle = (from detalle in detallePedido
+                             join pedido in pedidosDTO
+                             on detalle.IdPedido equals pedido.IdPedido
+                             select new DetallePedidoContract
+                             {
+                                 IdPedido = pedido.IdPedido,
+                                 FechaPedido = pedido.FechaPedido,
+                                 FechaEntrega = pedido.FechaEntrega,
+                                 NombreCliente = pedido.NombreCliente,
+                                 Estado = pedido.Estado,
+                                 Detalle = detalle.Detalle,
+                                 Tipo = detalle.Tipo,
+                                 Medidas = detalle.Medidas
 
-        //}
+                             }).ToList();
+
+            return pedidoDetalle;
+
+        }
     }
 }

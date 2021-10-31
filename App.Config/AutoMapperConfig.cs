@@ -12,6 +12,7 @@ namespace App.Config
         public AutoMapperConfig()
         {
             CreateMap<PedidosEntity, PedidosDTO>();
+            CreateMap<DetallePedidoEntity, DetallePedidoDTO>();
         }
     }
 }

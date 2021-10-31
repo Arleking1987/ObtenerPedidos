@@ -30,11 +30,11 @@ namespace SocialMedia.Infrastructure.Data.Configurations
                 .HasColumnName("tipo")
                 .HasMaxLength(100);
 
-            builder.HasOne(d => d.IdPedidoNavigation)
-                .WithMany(p => p.DetallePedido)
-                .HasForeignKey(d => d.IdPedido)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_detalle_pedido_Pedido");
+            //builder.HasOne(d => d.IdPedidoNavigation)
+            //    .WithMany(p => p.DetallePedido)
+            //    .HasForeignKey(d => d.IdPedido)
+            //    .OnDelete(DeleteBehavior.ClientSetNull)
+            //    .HasConstraintName("FK_detalle_pedido_Pedido");
         }
     }
 }

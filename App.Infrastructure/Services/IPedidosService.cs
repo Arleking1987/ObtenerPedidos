@@ -9,6 +9,7 @@ namespace SocialMedia.Infrastructure.Services
     public interface IPedidosService
     {
         List<PedidosDTO> GetAllPedidos();
-        //public Task<IEnumerable<PedidosDTO>> GetAllPedidos();
+
+        public List<DetallePedidoContract> GetPedidoById(int id);
     }
 }

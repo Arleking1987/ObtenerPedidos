@@ -45,6 +45,8 @@ namespace App.web
             //Configuracion de la inyeccion de dependencias
             services.AddTransient<IPedidosRepository, PedidosRepository>();
             services.AddTransient<IPedidosService, PedidosService>();
+            services.AddTransient<IDetallePedidoService, DetallePedidoService>();
+            services.AddTransient<IDetallePedidoRepository, DetallePedidoRepository>();
 
             //Configuración del mapper
             var mapperConfig = new MapperConfiguration(m =>

@@ -53,13 +53,13 @@ namespace App.web.Controllers
         //    return Ok(pedidos);
         //}
 
-        //[HttpPost]
-        //[Route("PostPedido")]
-        //public async Task<IActionResult> PostPedido(PedidosEntity pedido)
-        //{
-        //    await _pedidosRepository.PostPedido(pedido);
-        //    return Ok(pedido);
-        //}
+        [HttpPost]
+        [Route("GetPedidoById")]
+        public async Task<List<DetallePedidoContract>> GetPedidoById(int id)
+        {
+            List<DetallePedidoContract> pedido =  _pedidosService.GetPedidoById(id);
+            return pedido;
+        }
 
         //[HttpPost]
         //[Route("ConsultaPedido")]
