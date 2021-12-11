@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ReR+x2hST2ig94c4tf25uB2pqu/Q6L3yv0edF3j5vLjYhZvluyc1tsRLAnf3HHVEldUdEw82Xx1/DFS16ksHaA==",
+  "dgSpecHash": "JcuheBzKnaHEAcy1gBWTw1TdWcQd1n7OlLD5DuJWVhTOu2UI3v6W/JcTPyGz/YhPmjIpJE/StDot1F65VYw24Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\usuario\\source\\repos\\ObtenerPedidos\\App.web\\App.web.csproj",
   "expectedPackageFiles": [
@@ -110,7 +110,8 @@
     "C:\\Users\\usuario\\.nuget\\packages\\xunit.core\\2.4.0\\xunit.core.2.4.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\xunit.extensibility.core\\2.4.0\\xunit.extensibility.core.2.4.0.nupkg.sha512",
     "C:\\Users\\usuario\\.nuget\\packages\\xunit.extensibility.execution\\2.4.0\\xunit.extensibility.execution.2.4.0.nupkg.sha512",
-    "C:\\Users\\usuario\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512"
+    "C:\\Users\\usuario\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.0\\xunit.runner.visualstudio.2.4.0.nupkg.sha512",
+    "C:\\Users\\usuario\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.17\\microsoft.netcore.app.host.win-x64.3.1.17.nupkg.sha512"
   ],
   "logs": []
 }

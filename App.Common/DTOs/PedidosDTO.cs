@@ -11,5 +11,6 @@ namespace SocialMedia.Core.DTOs
         public DateTime FechaEntrega { get; set; }
         public string NombreCliente { get; set; }
         public string Estado { get; set; }
+        public List<DetallePedidoDTO> Detalles { get; set; }
     }
 }

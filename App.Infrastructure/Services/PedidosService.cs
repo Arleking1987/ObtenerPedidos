@@ -26,14 +26,17 @@ namespace SocialMedia.Infrastructure.Services
 
         public List<PedidosDTO> GetAllPedidos()
         {
+            
             List<PedidosDTO> listDTO = new List<PedidosDTO>();
             IQueryable<PedidosEntity> listEntities = _pedidosRepository.GetAllPedidos();
             listDTO = _mapper.Map<List<PedidosDTO>>(listEntities);
+           
             return listDTO;
 
         }
 
-        public List<DetallePedidoContract> GetPedidoById(int id)
+
+        public List<PedidosDTO> GetPedidoById(int id)
         {
             List<DetallePedidoContract> pedidoDetalle = new List<DetallePedidoContract>();
             IQueryable<PedidosEntity> listEntities = _pedidosRepository.GetAllPedidos();
@@ -41,23 +44,24 @@ namespace SocialMedia.Infrastructure.Services
             List<PedidosDTO> pedidosDTO = _mapper.Map<List<PedidosDTO>>(pedidoEntity);
             List<DetallePedidoDTO> detallePedido = _detallePedidoService.GetAllDetallePedidos();
 
-            pedidoDetalle = (from detalle in detallePedido
-                             join pedido in pedidosDTO
-                             on detalle.IdPedido equals pedido.IdPedido
-                             select new DetallePedidoContract
-                             {
-                                 IdPedido = pedido.IdPedido,
-                                 FechaPedido = pedido.FechaPedido,
-                                 FechaEntrega = pedido.FechaEntrega,
-                                 NombreCliente = pedido.NombreCliente,
-                                 Estado = pedido.Estado,
-                                 Detalle = detalle.Detalle,
-                                 Tipo = detalle.Tipo,
-                                 Medidas = detalle.Medidas
+            foreach (var pedidoDto in pedidosDTO)
+            {
+                pedidoDto.Detalles = (from detalle in detallePedido
+                                 join pedido in pedidosDTO
+                                 on detalle.IdPedido equals pedido.IdPedido
+                                 select new DetallePedidoDTO
+                                 {
+                                     IdPedido = detalle.IdPedido,
+                                     Medidas = detalle.Medidas,
+                                     Detalle = detalle.Detalle,
+                                     Tipo = detalle.Tipo,
+                                    
 
-                             }).ToList();
+                                 }).ToList();
+            }
+            
 
-            return pedidoDetalle;
+            return pedidosDTO;
 
         }
     }

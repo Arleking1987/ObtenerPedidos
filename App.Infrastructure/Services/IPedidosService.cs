@@ -8,8 +8,8 @@ namespace SocialMedia.Infrastructure.Services
 {
     public interface IPedidosService
     {
-        List<PedidosDTO> GetAllPedidos();
+        public List<PedidosDTO> GetAllPedidos();
 
-        public List<DetallePedidoContract> GetPedidoById(int id);
+        public List<PedidosDTO> GetPedidoById(int id);
     }
 }

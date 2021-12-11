@@ -28,13 +28,12 @@ namespace App.web.Controllers
 
         [HttpGet]
         [Route("GetAllPedidos")]
-        public List<PedidosDTO> GetAllPedidos()
+        public List<PedidosDTO> GetAllPedidos() 
         {
-            List<PedidosDTO> data = new List<PedidosDTO>();
-
+ 
             try
             {
-                data = _pedidosService.GetAllPedidos();
+                List<PedidosDTO> data = _pedidosService.GetAllPedidos();
                 return data;
 
             }
@@ -45,28 +44,16 @@ namespace App.web.Controllers
             }
         }
 
-        //[HttpGet]
-        //[Route("GetPedido")]
-        //public async Task<IActionResult> GetPedido(int id)
-        //{
-        //    var pedidos = await _pedidosRepository.GetPedido(id);
-        //    return Ok(pedidos);
-        //}
+       
 
         [HttpPost]
         [Route("GetPedidoById")]
-        public async Task<List<DetallePedidoContract>> GetPedidoById(int id)
+        public List<PedidosDTO> GetPedidoById(int id)
         {
-            List<DetallePedidoContract> pedido =  _pedidosService.GetPedidoById(id);
+            List<PedidosDTO> pedido = _pedidosService.GetPedidoById(id);
             return pedido;
         }
 
-        //[HttpPost]
-        //[Route("ConsultaPedido")]
-        //public async Task<IActionResult> ConsultaPedido(PedidosDTO pedido)
-        //{
-        //    await _pedidosRepository.PostPedido(pedido);
-        //    return Ok(pedido);
-        //}
+       
     }
 }
